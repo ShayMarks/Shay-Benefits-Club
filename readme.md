@@ -12,9 +12,10 @@ The website is built using the following technologies:
 - Express.js 🔥
 - MongoDB 📦
 - Mongoose 🍃
-- bcrypt 🕵🏼‍♂️
-- body-parser 👾
+- Bcrypt 🕵🏼‍♂️
+- Body-parser 👾
 - Handlebars 🎨
+- Postman 🟠
 - CSS 🖌️
 - JavaScript 💻
 

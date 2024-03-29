@@ -36,7 +36,7 @@ make sure to install all required npm packages by running the following command:
 
 ## Database MongoDB:
 
-### User (משתמש)
+### User
 
 - id: ObjectId
 - username: String
@@ -44,7 +44,7 @@ make sure to install all required npm packages by running the following command:
 - email: String
 - isAdmin: Boolean
 
-### Product (מוצר)
+### Product
 
 - id: ObjectId
 - name: String
@@ -53,7 +53,7 @@ make sure to install all required npm packages by running the following command:
 - category: ObjectId
 - stock: Number
 
-### Category (קטגוריה)
+### Category
 
 - id: ObjectId
 - name: String

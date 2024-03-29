@@ -1,0 +1,15 @@
+{{> toolbars/adminToolBar }}
+
+<h2>Add New Category</h2>
+<form id="addCategoryForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
+  <label for="description">Description:</label>
+  <textarea id="description" name="description"></textarea><br>
+  <button type="submit">Add Category</button>
+</form>
+
+{{> adminFooter }}
+
+<script src="/js/adminScript/addCategory.js"></script>
+

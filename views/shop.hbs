@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חנות המוצרים</title>
+    
+</head>
+<body>
+<nav class="categories-toolbar">
+    <ul id="categories-list">
+        <li><button ><a href="/login">log out</a></button></li>
+
+        <li><button ><a href="/home">home</a></button></li>
+        <!-- כאן יופיעו כל הקטגוריות -->
+    </ul>
+</nav>
+
+<!-- Trigger/Open The Modal -->
+<button onclick="showCartModal()">הצג עגלה</button>
+
+<!-- The Modal -->
+<div id="cart-modal" class="modal" style="display:none;">
+  <!-- Modal content -->
+  <div class="cart-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+
+
+    <main id="products-list">
+        <!-- כאן יופיעו כל המוצרים של הקטגוריה שנבחרה -->
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
+{{> footer }}

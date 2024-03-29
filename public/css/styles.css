@@ -1,0 +1,886 @@
+/* Reset מינימלי לאתחול הדף */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* עיצוב הניווט */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  background-color: #e9e9e9;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #d0d0d0;
+}
+
+/* עיצוב כללי לכפתורים */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* עיצוב הפוטר */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* עיצוב הודעת אישור הרשמה */
+.afterRegisterPage h2 {
+  color: #007bff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* התחלת העבודה על עיצוב הקישורים למדיה חברתית בדף צור קשר */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  color: #000;
+  
+}
+
+.contact-links a {
+  font-size: 124px;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-links a:hover {
+  color: #007bff;
+  text-shadow: 0 0 10px #333, /* זיהום ראשון */
+  0 0 20px #505050, /* זיהום שני */
+  0 0 30px #a0a0a0, /* זיהום שלישי */
+  0 0 40px #dadada; /* זיהום רביעי */
+}
+
+/* Toolbar Styles */
+.toolbar, .admin-toolbar {
+  background-color: #007bff; /* כחול בהיר */
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.toolbar a, .admin-toolbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.toolbar a:hover, .admin-toolbar a:hover {
+  background-color: #dbdbdb; 
+  transform: translateY(-2px);
+}
+
+/* Footer Styles */
+.user-footer, .admin-footer {
+  background-color: #333; /* שחור בהיר */
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Utility and Adjustment Styles */
+.main-container {
+  padding-bottom: 60px; /* Prevent content from being hidden behind the footer */
+}
+
+.hidden {
+  display: none;
+}
+
+/* עיצוב טפסים */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745; /* ירוק */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838; /* ירוק כהה יותר */
+}
+
+/* עיצוב הודעת אחרי רישום */
+.afterRegisterPage {
+  text-align: center;
+  margin: 20px;
+}
+
+.afterRegisterPage h2 {
+  color: #007bff; /* כחול */
+}
+
+/* עיצוב חלון קופץ */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* עיצוב כללי לאלמנטים משלימים */
+.hidden {
+  display: none !important;
+}
+
+/* עיצוב רשימת קטגוריות */
+#categories-list, #productList, #categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 20px;
+}
+
+#categories-list li, #productList li, #categoryList li {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#categories-list li:hover, #productList li:hover, #categoryList li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+/* עיצוב טבלאות לצפייה במוצרים */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* עיצוב תגובתי לתמונות מוצרים */
+.product img {
+  width: auto;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+/* Utility classes for spacing and visibility */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* עיצוב דפי אדמין */
+.admin-section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.admin-section h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* עיצוב כפתורים בסקשן האדמין */
+.admin-section button {
+  background-color: #28a745; /* ירוק */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.admin-section button:hover {
+  background-color: #218838;
+}
+
+/* עיצוב טפסי הוספת ועריכת מוצרים/קטגוריות */
+form#addProductForm, form#addCategoryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form#addProductForm input, form#addCategoryForm input,
+form#addProductForm textarea, form#addCategoryForm textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* עיצוב כפתורי הפעולה בטפסים */
+form#addProductForm button, form#addCategoryForm button {
+  width: auto;
+  padding: 10px 15px;
+  background-color: #007bff; /* כחול */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form#addProductForm button:hover, form#addCategoryForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Utility and Adjustments */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+/* הגדלה וצל בהובר לכפתורים */
+button:hover, .button:hover, a.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* עיצוב אינטראקטיבי לקישורים */
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* אפקט ריחוף לקטגוריות ומוצרים */
+.categories-toolbar li:hover, .product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* עיצוב בסיסי למוצרים */
+.product {
+  display: inline-block;
+  width: calc(33.33% - 20px); /* 3 פריטים בשורה, עם רווח של 10px משני הצדדים */
+  margin: 10px;
+  text-align: center; /* ריכוז התוכן בתוך הפריט */
+  vertical-align: top;
+  background-color: #fff; /* רקע לבן */
+  padding: 10px; /* רווח פנימי */
+  border-radius: 5px; /* עיגול פינות */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* צל קל */
+}
+
+/* עיצוב תגובתי */
+@media (max-width: 768px) {
+  nav, .toolbar, .admin-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-content, form {
+    width: 90%;
+  }
+
+  header, .admin-section, .product {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  #productList, #categories-list, #categoryList {
+    justify-content: space-around;
+  }
+}
+
+/* אפקט ריחוף לאייקונים בדף צור קשר */
+.contact-links a:hover {
+  transform: scale(1.2);
+}
+
+/* סגירת החלון הקופץ בלחיצה על ה-X */
+.close:hover {
+  color: #d9534f; /* אדום */
+}
+
+/* כיתוב על כפתורים בפורמים משנה צבע בהובר */
+form button[type="submit"]:hover {
+  opacity: 0.8;
+}
+/* עיצוב מודאל עגלת הקניות */
+#cart-modal {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 500px;
+}
+
+.cart-content h2 {
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* עיצוב אימוג'ים בדף צור קשר */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-links a {
+  margin: 0 10px;
+  color: #333;
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 10px #0056b3, /* זיהום ראשון */
+                 0 0 20px #0e5aac, /* זיהום שני */
+                 0 0 30px #1f60a7, /* זיהום שלישי */
+                 0 0 40px #3e73ac; /* זיהום רביעי */
+}
+
+.contact-links a:hover {
+  transform: rotate(360deg);
+}
+
+/* אפקטים נוספים לאינטראקציה עם המשתמש */
+button, .button, a.button, .close:hover, form button[type="submit"]:hover, .contact-links a:hover {
+  transition: all 0.3s ease;
+}
+
+/* הודעת סטטוס ואלרטים */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* אדום */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.alert-success {
+  background-color: #4CAF50; /* ירוק */
+}
+
+.alert-info {
+  background-color: #2196F3; /* כחול */
+}
+
+.alert-warning {
+  background-color: #ff9800; /* כתום */
+}
+
+.alert:hover {
+  opacity: 1;
+}
+
+/* עיצוב תגובתי להתאמה למסכים שונים */
+@media screen and (max-width: 992px) {
+  .admin-section, form {
+    width: 90%;
+  }
+
+  nav, .toolbar, .admin-toolbar {
+    flex-direction: column;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1, .admin-section h2, button, a {
+    font-size: smaller;
+  }
+
+  .contact-links a {
+    font-size: 20px; /* קטן יותר לניידים */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav a, .toolbar a, .admin-toolbar a {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .product, .category-item {
+    width: 100%; /* מלא את הרוחב במכשירים קטנים */
+  }
+}
+
+/* אופטימיזציה לטקסטים וכותרות למסכים קטנים */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+/* הפוך את התפריט לכפתורי המבורגר במסכים קטנים */
+.menu-toggle {
+  display: none; /* רק להצגה במסכים קטנים */
+  font-size: 24px;
+  padding: 10px;
+}
+
+/* כאשר התפריט המתקפל פתוח */
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+}
+
+/* עיצוב פרטי מוצר וקטגוריה */
+.product-detail, .category-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 500px;
+  background-color: #fff;
+}
+
+.product-detail img, .category-detail img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-detail h3, .category-detail h3 {
+  margin: 15px 0;
+  color: #007bff;
+}
+
+/* עיצוב אלמנטים של פורם חיפוש או סינון */
+.search-form, .filter-form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form input[type="text"], .filter-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 24px);
+}
+
+.search-form button, .filter-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-form button:hover, .filter-form button:hover {
+  background-color: #218838;
+}
+
+/* עיצוב לתמונות וגלריות */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* תגובתיות נוספת לגלריות ואלמנטים חזותיים */
+@media screen and (max-width: 768px) {
+  .image-gallery img {
+    width: 100%;
+  }
+
+  .product-detail, .category-detail, .search-form, .filter-form {
+    width: 90%;
+  }
+}
+
+/* סרגלי גלילה מותאמים */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* אייקונים משופרים עם Font Awesome */
+.fa {
+  margin-right: 5px;
+}
+
+/* כפתורים לגלילה לראש העמוד */
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: none; /* הצגה רק בגלילה למטה */
+}
+
+.scrollToTop:hover {
+  background-color: #0056b3;
+}
+
+/* תצוגה תגובתית נוספת */
+@media screen and (max-width: 576px) {
+  .scrollToTop {
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+  }
+
+  /* הקטנת גודל אייקונים וטקסט בסרגלי כלים ותפריטים */
+  .fa {
+    font-size: 14px;
+  }
+
+  nav a, .toolbar a, .admin-toolbar a {
+    font-size: 14px;
+  }
+}
+
+/* פונקציונליות נוספת לאייקונים ולאלמנטים גרפיים */
+.icon-enhanced {
+  transition: transform 0.3s ease;
+}
+
+.icon-enhanced:hover {
+  transform: rotate(360deg);
+}
+
+/* הודעות ואלרטים דינמיים */
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: inherit;
+}
+
+/* אפקטים בונוס לחוויית משתמש מעודנת */
+.hover-grow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-grow:hover {
+  transform: scale(1.1);
+}
+
+/* אנימציה פשוטה ללוגו או לאייקונים */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+/* שינוי צבע פונט באופן דינמי עבור טקסט מודגש */
+.dynamic-color-change {
+  transition: color 0.3s ease-in-out;
+}
+
+.dynamic-color-change:hover {
+  color: #28a745; /* ירוק */
+}
+
+/* תגובתיות לתמונות בארטיקלים או בפוסטים */
+.article-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* שיפור נראות של ציטוטים */
+blockquote {
+  border-left: 5px solid #007bff;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\\201C""\\201D""\\2018""\\2019";
+}
+
+blockquote:before {
+  color: #007bff;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+/* נגישות ופוקוס לאלמנטים עם טאב */
+a:focus, button:focus, input:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* גרדיאנטים ורקעים דינמיים */
+.dynamic-background {
+  background-image: linear-gradient(45deg, #007bff, #28a745);
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.dynamic-background:hover {
+  background-image: linear-gradient(45deg, #28a745, #007bff);
+}
+
+/* טקסט עם רקע גרדיאנט */
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #007bff, #28a745);
+  -webkit-text-fill-color: transparent;
+}
+
+/* רקע מנומר לאזורים מסוימים */
+.striped-background {
+  background-image: linear-gradient(45deg, #f2f2f2 25%, transparent 25%, transparent 50%, #f2f2f2 50%, #f2f2f2 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+/* אפקט טקסט צללית */
+.text-shadow-effect {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* אנימציה של שינוי צבע טקסט */
+@keyframes color-change {
+  0% { color: #007bff; }
+  50% { color: #28a745; }
+  100% { color: #007bff; }
+}
+
+.color-changing-text {
+  animation: color-change 5s infinite;
+}
+
+/* נגישות והדגשה עבור פוקוס על טפסים וקישורים */
+input:focus, textarea:focus, select:focus, a:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* עיצוב בר ניווט צף */
+.floating-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
